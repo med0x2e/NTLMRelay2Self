@@ -102,6 +102,7 @@ Or alternatively use `SCMUACBypass` script from James (@tiraniddo)
 * `LdapRelayScan` https://github.com/zyn3rgy/LdapRelayScan
 * `SCMBypassUAC` https://gist.github.com/tyranid/c24cfd1bd141d14d4925043ee7e03c82
 * `gets4uticket` https://github.com/dirkjanm/PKINITtools/blob/master/gets4uticket.py
+* `impacket` https://github.com/SecureAuthCorp/impacket
 
 ### <u>Credits: </u>
 Based on the research and tools/PoCs created by:
@@ -109,3 +110,5 @@ Based on the research and tools/PoCs created by:
 * @tiraniddo
 * @_dirkjan
 * @harmj0y
+* topotam
+
