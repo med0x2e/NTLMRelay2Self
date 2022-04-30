@@ -2,8 +2,6 @@
 
 ## NTLMRelay2Self over HTTP (Webdav)
  
-<b>An other No-Fix LPE</b>
-
 Just a walkthrough of how to escalate privileges locally by forcing the system you landed initial access on to reflectively authenticate over HTTP to itself and forward the received connection to an HTTP listener (ntlmrelayx) configured to relay to DC servers over LDAP/LDAPs for either setting shadow credentials or configuring RBCD.
 
 This would result in a valid kerberos TGT ticket that can be used to obtain a TGS for a service (HOST/CIFS) using `S4U2Self` by impersonating a user with local administrator access to the host (domain admin ..etc), or alternatively, it's also possible to retrieve the machine account's NTLM hash with getnthash.py and then create a silver ticket.
