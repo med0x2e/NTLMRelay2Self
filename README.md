@@ -20,6 +20,7 @@ The steps below lists all the actions taken to escalate privileges locally on an
 
 ### <u>Steps:</u>
 
+<b>TLDR:</b> On the linux machine, we run ntlmrelayx and listen for any NTLM connections over HTTP port 80, and then use the printerbug script to force the `Win10` system to authenticate using the machine account against itself on port 80, which hopefully should get picked up by our reverse port forward (beacon) on port 80 and redirected to the ntlmrelayx HTTP listener, and then ntlmrelayx will relay it through the socks proxy to the DC server over LDAP/LDAPs to set shadow credentials on the `Win10$` computer account.
 
 1. Start the WebClient service from an unprivileged context: <br>
     `inline-execute StartWebClientSvc.x64.o`
